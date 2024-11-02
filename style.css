@@ -1,0 +1,193 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+}
+
+/* ---------------------------------------------------- */
+
+
+main {
+	text-align: center;
+	max-width: 1040px;
+	margin: 60px auto;
+}
+
+h1 { 
+	font-size: 28px;
+	font-family: "Montserrat", sans-serif;
+}
+
+h1::after {
+	content: "";
+	width: 60px;
+	height:2px;
+	background-color: #407BFF;	
+	display:block;
+	margin: 15px auto;
+}
+
+h2 {
+	font-size: 16px;
+	font-family: "Montserrat", sans-serif;
+}
+
+p {
+	color: #8B8B8B; 
+	line-height: 21px;
+}
+
+.img-home {
+	width: 350px;
+}
+
+button {
+	padding: 10px 30px;
+	color: white;
+	border-radius: 20px;
+	border: none;
+	display:block;
+	margin: 10px auto;
+}
+
+.blue {
+	background-color: #407BFF;
+	margin-top: 30px;
+}
+
+.grey {
+	background-color: #8B8B8B;
+}
+
+.box2 {
+	padding: 30px 10px 20px 10px;
+}
+
+.box3, /* p */
+.box5 {
+	padding: 30px 10px 10px 10px;
+}
+
+.box4, /* icons */
+.box6 {
+	padding: 10px 10px 20px 10px;
+}
+
+.icon-info {
+	box-shadow: 0px 4px 6px #9ac1e0;
+	border-radius: 10px; 
+	display: flex;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+.icon {
+	color: #407BFF; 
+}
+
+.icon-text { 
+	font-size: 13px; 
+	color: #8B8B8B;
+	padding: 15px 30px;
+}
+
+
+@media screen and (min-width: 640px) {
+	.img-home {
+			width: 400px;
+		}
+
+	button {
+		display: inline-block; 
+		margin-top: 20px;
+	}
+
+	.blue {
+		margin: 0 15px 0 0;
+	}
+
+	.box3, /* p */
+	.box5 {
+		max-width: 550px;
+		margin: 0 auto;
+	}
+
+	.box2 {
+		margin-bottom: 30px;
+	}
+
+	.box4, /* icons */
+	.box6 {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	.icon-info {
+		flex: 0 0 calc((100% - 40px ) / 3);
+		display: block;
+		padding: 40px 10px;
+		margin-top: 0px;
+	}	
+
+	.icon,
+	.icon-text {
+		display:block;
+		text-align:center;
+	}
+
+	.icon-text {
+		padding: 20px 0px 0px 0px;
+	}
+
+}	
+
+@media screen and (min-width: 1100px) {
+
+	.img-home {
+			max-width: 425px;
+	}
+
+	h1,
+	h2,
+	p,
+	.box2 {
+		text-align: left;
+	}
+
+	h1::after {
+		margin: 15px 0;
+	}
+
+	section { 
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: space-between;
+	}
+
+	.section-one,
+	.section-two {
+		flex-direction: row-reverse;
+	}
+
+	.box1,
+	.box2 {
+		flex: 0 0 calc(50% - 30px);
+	}
+
+   .box3,
+   .box5 {
+		flex: 0 0 430px;
+	}
+
+   .box4,
+   .box6 {
+		flex: 0 0 550px;
+	}
+
+}
+
+
